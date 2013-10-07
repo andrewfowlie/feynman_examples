@@ -1,0 +1,14 @@
+\begin{fmffile}{HiggsDecay_TwoGamma} 
+\begin{fmfgraph*}(150,75) 
+\fmfleft{i1,i2,i3}
+\fmfright{o1,o2}
+\fmf{phantom}{i1,v1,o1} 
+\fmffreeze 
+\fmf{phantom}{i3,v2,o2}
+\fmffreeze
+\fmf{scalar, label=$h$}{i2,v3}
+\fmf{fermion, label=$t$}{v1,v2,v3,v1}
+\fmf{boson, label=$\gamma$}{v1,o1}
+\fmf{boson, label=$\gamma$}{v2,o2}
+\end{fmfgraph*}
+\end{fmffile}

@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage{feynmp}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{listings}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{mathpazo}
+\usepackage{wrapfig}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{attachfile}
+
+%
+% Style for LaTeX code.
+%
+
+\lstdefinestyle{LaTeX}{
+numbers=none,
+tabsize=3,
+breaklines=true,
+language={TeX},
+basicstyle=\footnotesize\ttfamily,
+numberstyle=\tiny,
+commentstyle=\it,
+keywordstyle=\color{NavyBlue}\bfseries,
+keywordstyle=[2]\color{OrangeRed}\bfseries,
+keywordstyle=[3]\color{Violet}\bfseries,
+keywords={begin,end,newcommand,ensuremath,makeatletter,makeatother,ifnextchar,usepackage,DeclareGraphicsRule},
+keywords=[2]{fmfleft,fmfright,fmffreeze,fmf,fmfct,fmfstraight,fmfblob},
+keywords=[3]{fermion,boson,scalar,dotted,gaugino,phantom,label,tension,gluon,gluino,fmfgraph,fmffile},
+backgroundcolor=\color{GreenYellow},
+showstringspaces=false,
+extendedchars=true,
+showspaces=false,
+showtabs=false,
+}
+
+\lstdefinestyle{sh}{
+numbers=none,
+tabsize=3,
+breaklines=true,
+language={TeX},
+basicstyle=\footnotesize\ttfamily,
+numberstyle=\tiny,
+commentstyle=\it,
+keywordstyle=\color{NavyBlue}\bfseries,
+keywordstyle=[2]\color{OrangeRed}\bfseries,
+keywordstyle=[3]\color{Violet}\bfseries,
+keywords={for,do,if,fi,echo,then},
+keywords=[2]{pdflatex,mpost},
+keywords=[3]{fermion,boson,scalar,dotted,gaugino,phantom,label,tension,gluon,gluino,fmfgraph,fmffile},
+backgroundcolor=\color{GreenYellow},
+showstringspaces=false,
+extendedchars=true,
+showspaces=false,
+showtabs=false,
+}
+
+\input{Macros.tex}
+\newcommand{\code}[1]{\colorbox{GreenYellow}{\color{Sepia}\bfseries\ttfamily\detokenize{#1}}}
+
+%
+% Input diagram and plain LaTex.
+%
+\newcommand{\example}[1]{%
+\begin{minipage}[][][t]{0.65\linewidth}
+\attachfile[icon=Paperclip,mimetype=text/plain]{#1}{\colorbox{GreenYellow}{\color{Sepia}\bfseries\ttfamily\detokenize{#1}}}
+\lstinputlisting[style=LaTeX]{#1}
+\end{minipage}
+\begin{minipage}[][][t]{0.35\linewidth}
+\centering%
+\input{#1}%
+\end{minipage}
+}
+
+\begin{document}
+\title{Feynmf examples}
+\maketitle
+\tableofcontents
+\section{Saving code}
+Click on the paperclip \attachfile[icon=Paperclip]{}{} to save a piece of code.
+\section{Compiling}
+You must have the preamble:
+\begin{lstlisting}[style=LaTeX]
+\usepackage{feynmp}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\end{lstlisting}
+You must run \code{pdflatex} or \code{latex}, then \code{mpost} on the intermediate \code{*.mp} files, then \code{pdflatex} or \code{latex}. To make this document:
+\attachfile[icon=Paperclip,mimetype=text/plain]{make.sh}{\code{make.sh}}
+\lstinputlisting[style=sh]{make.sh}
+\section{Macros}
+I use the following macros in my figure labels:
+\attachfile[icon=Paperclip,mimetype=text/plain]{Macros.tex}{\code{Macros.tex}}
+\lstinputlisting[style=LaTeX]{Macros.tex}
+\section{\bsmumu}
+\example{BToMuMu_MSSM.tex}
+\example{BToMuMu_SM_Box.tex}
+\example{BToMuMu_SM_Penguin.tex}
+\section{\butaunu}
+\example{BToTauNu_Hpm.tex}
+\example{BToTauNu_W.tex}
+\section{\bsg}
+\example{BToXsGamma_MSSM_Chargino.tex}
+\example{BToXsGamma_MSSM_H.tex}
+\example{BToXsGamma_SM_WLoop.tex}
+\example{BToXsGamma_SM_W.tex}
+\section{\dmb}
+\example{DMBs_Box_Chargino.tex}
+\example{DMBs_Box_DoublePenguin.tex}
+\example{DMBs_Box_Gluino.tex}
+\example{DMBs_Box_WbyW.tex}
+\example{DMBs_Box_W.tex}
+\section{Golden decay}
+\example{GoldenDecay.tex}
+\section{Higgs decay}
+\example{HiggsDecay_FourL.tex}
+\example{HiggsDecay_TwoGamma.tex}
+\section{Higgs production}
+\example{HiggsProduction_GluonFusion.tex}
+\example{HiggsProduction_HiggsStrahlung.tex}
+\example{HiggsProduction_ttbar.tex}
+\example{HiggsProduction_VBF.tex}
+\section{\damu}
+\example{Muon_Chargino.tex}
+\example{Muon_Neutralino.tex}
+\example{Muon_SMHadronic.tex}
+\example{Muon_SMSchwinger.tex}
+\example{Muon_SMWBoson.tex}
+\example{Muon_SMZBoson_MSSMHigg.tex}
+\section{Relic density}
+\example{RelicDensity_AF.tex}
+\example{RelicDensity_Bulk.tex}
+\example{RelicDensity_CA.tex}
+\example{RelicDensity_FP.tex}
+\example{ScalarLoops_Boson.tex}
+\example{ScalarLoops_FermionMass.tex}
+\example{ScalarLoops_Fermion.tex}
+\example{ScalarLoops_Quartic.tex}
+\section{Trilepton}
+\example{Trilepton.tex}
+\end{document}
+
+ls *.tex | awk '{printf "\\example{%s}\n", $1}' 
+
+pdflatex Example.tex
+for f in *.mp; 
+        do 
+	echo $f
+        if [ "$f" = "feynmp.mp" ] ; then continue; echo "skipping"; fi
+        g="`echo "$f" | cut -d'.' -f1`.t1"
+        if [ ! -f $g ]; then
+                mpost $f
+        fi
+done
+pdflatex Example.tex
+pdflatex Example.tex
+
+for f in *.tex; 
+        do 
+	echo $f
+        ./strip.pl $f > $f.strip
+	mv $f.strip $f
+done
+

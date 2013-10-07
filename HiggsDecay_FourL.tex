@@ -1,0 +1,14 @@
+\begin{fmffile}{HiggsDecay_FourL} 
+\begin{fmfgraph*}(150,75) 
+\fmfleft{i1}
+\fmfright{o1,o2,o3,o4}
+\fmf{scalar, label=$h$}{i1,v2}
+\fmf{boson, label=$Z$}{v1,v2,v3}
+\fmf{phantom,tension=0.1}{v2,v3}
+\fmfstraight
+\fmf{phantom,tension=0.1}{o1,o2,o3,o4}
+\fmf{fermion, label=$l$}{o1,v1,o2}
+\fmf{fermion, label=$l$, label.dist=-12.0}{o3,v3,o4}
+\end{fmfgraph*}
+\end{fmffile}
+

@@ -1,0 +1,20 @@
+\begin{fmffile}{BToMuMu_MSSM}
+\begin{fmfgraph*}(150,75) 
+\fmfleft{i1,i2,i3}
+\fmfright{o1,o2,o3}
+\fmf{phantom}{i2,v1,v6,o2}
+\fmffreeze
+\fmf{fermion, label=$b$}{i3,v1}
+\fmf{fermion, label=$s$}{v2,i1}
+\fmf{fermion, label=$\mu$, label.pos=right, label.dist=-14}{v6,o1}
+\fmf{fermion, label=$\mu$, label.pos=right}{o3,v6}        
+\fmf{gaugino, label=$\charg$, label.dist=3, left, tension=0.05}{v2,v3}
+\fmf{dashes, label=$\s{t}$, label.pos=right}{v2,v4}
+\fmf{dashes}{v4,v3}
+\fmfct{v4}
+\fmf{plain, label=$b$, label.pos=right}{v3,v5}
+\fmf{plain}{v5,v1}
+\fmfct{v5}
+\fmf{dashes, label=$h,,H,,A$, tension=0.5}{v1,v6}
+\end{fmfgraph*}
+\end{fmffile}

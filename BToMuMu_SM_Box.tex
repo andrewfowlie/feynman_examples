@@ -1,0 +1,18 @@
+\begin{fmffile}{BToMuMu_SM_Box} 
+\begin{fmfgraph*}(150,75) 
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmf{phantom}{i1,v1,v3,o1}
+\fmffreeze
+\fmf{phantom}{i2,v2,v4,o2}
+\fmffreeze	
+\fmf{fermion, label=$b$}{i1,v1}
+\fmf{fermion, label=$s$}{v2,i2}
+\fmf{fermion, label=$\mu$}{v3,o1}
+\fmf{fermion, label=$\mu$}{o2,v4}        
+\fmf{fermion, label=$t$}{v1,v2}
+\fmf{fermion, label=$\nu_\mu$}{v4,v3}
+\fmf{boson, label=$W$}{v1,v3}
+\fmf{boson, label=$W$}{v2,v4}       
+\end{fmfgraph*}
+\end{fmffile}

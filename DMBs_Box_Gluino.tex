@@ -1,0 +1,22 @@
+\begin{fmffile}{DMBs_Box_Gluino} 
+\begin{fmfgraph*}(150,75) 
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmf{phantom}{i1,v1,v3,o1}
+\fmffreeze
+\fmf{phantom}{i2,v2,v4,o2}
+\fmffreeze
+\fmf{fermion, label=$b$}{v1,i1}
+\fmf{fermion, label=$s$}{i2,v2}
+\fmf{gluino, label=$\gluino$, label.dist=8, label.side=right}{v3,v1}
+\fmf{gluino, label=$\gluino$, label.dist=8, label.side=right}{v2,v4}
+\fmf{scalar, label=$\s{s}$}{v2,v5}
+\fmf{scalar, label=$\s{b}$}{v5,v1}
+\fmfct{v5}
+\fmf{scalar, label=$\s{s}$}{v3,v6}
+\fmf{scalar, label=$\s{b}$}{v6,v4}
+\fmfct{v6}
+\fmf{fermion, label=$s$}{o1,v3}
+\fmf{fermion, label=$b$}{v4,o2}
+\end{fmfgraph*}
+\end{fmffile}

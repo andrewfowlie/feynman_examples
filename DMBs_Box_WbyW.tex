@@ -1,0 +1,18 @@
+\begin{fmffile}{DMBs_Box_WbyW} 
+\begin{fmfgraph*}(150,75) 
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmf{phantom}{i1,v1,v3,o1}
+\fmffreeze
+\fmf{phantom}{i2,v2,v4,o2}
+\fmffreeze
+\fmf{fermion, label=$b$}{v1,i1}
+\fmf{fermion, label=$s$}{i2,v2}
+\fmf{fermion, label=$u,,c,,t$}{v2,v1}
+\fmf{boson, label=$W$}{v1,v3}
+\fmf{boson, label=$W$}{v2,v4}
+\fmf{fermion, label=$u,,c,,t$}{v3,v4}
+\fmf{fermion, label=$s$}{o1,v3}
+\fmf{fermion, label=$b$}{v4,o2}
+\end{fmfgraph*}
+\end{fmffile}

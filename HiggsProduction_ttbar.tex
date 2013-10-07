@@ -1,0 +1,17 @@
+\begin{fmffile}{HiggsProduction_ttbar}
+\begin{fmfgraph*}(150,75) 
+\fmfleft{i1,i2}
+\fmfright{o1,o2,o3}
+\fmf{phantom}{i1,v1,o1}
+\fmffreeze
+\fmf{phantom}{i2,v2,o3}
+\fmffreeze
+\fmfstraight
+\fmf{phantom}{v1,v3,v2}
+\fmffreeze
+\fmf{gluon, label=$g$, label.dist=+12.0}{i1,v1}
+\fmf{gluon, label=$g$, label.dist=+12.0}{i2,v2}
+\fmf{fermion, label=$t$}{o3,v2,v3,v1,o1}
+\fmf{scalar, label=$h$}{v3,o2}
+\end{fmfgraph*}
+\end{fmffile}

@@ -1,0 +1,18 @@
+\begin{fmffile}{Muon_Chargino}
+\begin{fmfgraph*}(150,75)
+\fmfleft{i1,i2}
+\fmfright{o1,o2,o3}
+\fmf{phantom}{i2,v4,v5,o3}
+\fmffreeze
+\fmf{phantom, right}{v4,v6,v5}
+\fmffreeze
+\fmf{phantom}{i1,v1,v2,o1}
+\fmffreeze
+\fmf{fermion, label=$\mu$}{i1,v1}
+\fmf{scalar, label=$\s{\nu}[\mu]$}{v1,v2}
+\fmf{fermion, label=$\mu$}{v2,o1}
+\fmf{boson, tension=0.5}{v1,v3,v2}
+\fmf{fermion, label=$\charg$, label.dist=-24.0, label.side=right, tension=0.5}{v1,v3,v2}
+\fmf{photon, label=$\gamma$}{v3,v6}
+\end{fmfgraph*}
+\end{fmffile}

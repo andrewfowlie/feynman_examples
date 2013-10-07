@@ -1,0 +1,23 @@
+\makeatletter
+\newcommand{\s}[1]{%
+\@ifnextchar[{\s@i{#1}}{\s@i{#1}[{}]}%
+}
+\def\s@i#1[#2]{%
+\@ifnextchar[{\s@ii{#1}[{#2}]}{\s@ii{#1}[{#2}][{}]}%
+}
+\def\s@ii#1[#2][#3]{%
+\ensuremath{\tilde{#1}_{#2}^{#3}}%
+}
+\makeatother
+\newcommand{\neut}[1][]{\ensuremath{\chi_{#1}^{0}}} 
+\newcommand{\charg}[1][]{\ensuremath{\chi_{#1}^{\pm}}}
+\newcommand{\gluino}{\s{g}}
+\newcommand{\bsb}{\ensuremath{\oversymb{B}_s}}
+\newcommand{\bs}{\ensuremath{B_s}}
+\newcommand\damu{\ensuremath{\delta a_\mu}}
+\newcommand{\bsg}{\ensuremath{b\to s \gamma}}
+\newcommand{\bsmumu}{\ensuremath{\bs\to\mu^+\mu^-}}
+\newcommand{\bbmix}{\ensuremath{\bsb\text{\emdash}\bs}}
+\newcommand{\butaunu}{\ensuremath{B_u \to \tau \nu}}
+\newcommand{\dmb}{\ensuremath{\Delta M_{\bs}}}
+

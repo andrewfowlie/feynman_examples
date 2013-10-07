@@ -1,0 +1,17 @@
+\begin{fmffile}{Muon_SMHadronic} 
+\begin{fmfgraph*}(150,75) 
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmf{phantom}{i2,v5,o2}
+\fmffreeze
+\fmf{phantom}{i1,v1,v2,v3,o1}
+\fmffreeze
+\fmf{phantom}{v4,v5}
+\fmf{fermion, label=$\mu$}{i1,v1,v2,v3,o1}
+\fmf{boson, label=$\gamma$, label.dist=-18}{v1,v4}
+\fmf{boson, label=$\gamma$, label.dist=-12}{v2,v4}
+\fmf{boson, label=$\gamma$}{v3,v4}
+\fmfblob{.12w}{v4} 
+\fmf{boson, label=$\gamma$}{v4,v5}
+\end{fmfgraph*}
+\end{fmffile}

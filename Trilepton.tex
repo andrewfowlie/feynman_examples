@@ -1,0 +1,20 @@
+
+\begin{fmffile}{Trilepton} 
+\begin{fmfgraph*}(150,150) 
+\fmfleft{i1,i2}
+\fmfright{o1,o2,o3,o4,o5,o6}
+\fmf{fermion, label=$u$, tension=5, label.side=left}{i1,v1}
+\fmf{fermion, label=$d$, tension=5, label.side=left}{v1,i2}
+\fmf{boson, label=$W$, tension=5}{v1,v2}
+\fmf{gaugino, label=$\charg[1]$, label.side=left, tension=5}{v2,v3}
+\fmf{gaugino, label=$\neut[2]$, label.side=right, tension=5}{v2,v4}     
+\fmf{scalar, label=$\s{\nu}[e]$, label.side=right}{v3,v6}
+\fmf{fermion, label=$e$, label.side=left, tension=5}{v3,o6}
+\fmf{fermion, label=$\nu_e$, label.side=left}{v6,o5}
+\fmf{gaugino, label=$\neut[1]$, label.side=right}{v6,o4}      
+\fmf{scalar, label=$\s{\mu}$, label.side=left}{v4,v5}
+\fmf{fermion, label=$\mu$, label.side=right, tension=5}{v4,o1}
+\fmf{fermion, label=$\mu$, label.side=right}{v5,o2}
+\fmf{gaugino, label=$\neut[1]$, label.side=left}{v5,o3}
+\end{fmfgraph*}
+\end{fmffile}

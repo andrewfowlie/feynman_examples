@@ -1,0 +1,22 @@
+
+\begin{fmffile}{GoldenDecay}
+\begin{fmfgraph*}(150,75) 
+\fmfleft{i1,i2,i3,i4}
+\fmfright{o1,o2,o3,o4}
+\fmf{phantom}{i1,v1,v2,v3,o1}
+\fmffreeze     
+\fmf{phantom}{i4,v4,v5,v6,o2}
+\fmffreeze    
+\fmf{scalar, label=$\s{q}$}{i1,v1}
+\fmf{fermion, label=$j$}{v1,v4}
+\fmf{phantom}{v4,o4}
+\fmf{gaugino, label=$\neut[2]$}{v1,v2}
+\fmf{fermion, label=$\ell^\mp$, label.side=left}{v2,v5}
+\fmf{phantom}{v5,o3}
+\fmf{scalar, label=$\s{\ell}$}{v2,v3}
+\fmf{fermion, label=$\ell^\pm$, label.side=left}{v3,v6}
+\fmf{phantom}{v6,o2}
+\fmf{gaugino, label=$\neut[1]$}{v3,o1}
+\end{fmfgraph*}
+\end{fmffile}
+

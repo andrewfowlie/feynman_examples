@@ -1,0 +1,17 @@
+\begin{fmffile}{Muon_Neutralino}
+\begin{fmfgraph*}(150,75)
+\fmfleft{i1,i2}
+\fmfright{o1,o2,o3}
+\fmf{phantom}{i2,v4,v5,o3}
+\fmffreeze
+\fmf{phantom, right}{v4,v6,v5}
+\fmffreeze
+\fmf{phantom}{i1,v1,v2,o1}
+\fmffreeze
+\fmf{fermion, label=$\mu$}{i1,v1}
+\fmf{gaugino, label=$\neut$}{v1,v2}
+\fmf{fermion, label=$\mu$}{v2,o1}
+\fmf{scalar, label=$\s{\mu}$, label.dist=-18.0}{v1,v3,v2}
+\fmf{photon, label=$\gamma$}{v3,v6}
+\end{fmfgraph*}
+\end{fmffile}

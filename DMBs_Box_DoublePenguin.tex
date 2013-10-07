@@ -1,0 +1,16 @@
+\begin{fmffile}{DMBs_Box_DoublePenguin}
+\begin{fmfgraph*}(150,75) 
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmf{fermion, label=$b$}{v1,i1}
+\fmf{fermion, label=$s$}{i2,v2}
+\fmf{gaugino, label=$\charg$, tension=0.4, label.dist=-18}{v1,v2}
+\fmf{scalar, label=$\s{t}$, tension=0.6,label.dist=-15}{v2,v3,v1}
+\fmf{dashes, label=$h,,H,,A$}{v3,v4}
+\fmf{scalar, label=$\s{t}$, tension=0.6,label.dist=-15}{v5,v4,v6}
+\fmf{gaugino, label=$\charg$, tension=0.4, label.dist=6}{v5,v6}
+\fmf{fermion, label=$s$,label.dist=6}{o1,v5}
+\fmf{fermion, label=$b$,label.dist=-18}{v6,o2}
+\end{fmfgraph*}
+\end{fmffile}
+        
